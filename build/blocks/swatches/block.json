@@ -1,0 +1,55 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cartessia/swatches",
+  "version": "1.0.0",
+  "title": "Variation Swatches",
+  "category": "cartessia",
+  "icon": "art",
+  "description": "Accessible colour, image, and button swatches that replace the variation dropdowns on a variable product. Real radio-group semantics, full keyboard support, and a visible text label beside every colour. Built to WCAG 2.2 AA.",
+  "keywords": [
+    "woocommerce",
+    "swatches",
+    "variation",
+    "attribute",
+    "color"
+  ],
+  "textdomain": "cartessia",
+  "usesContext": [
+    "postId"
+  ],
+  "attributes": {
+    "productId": {
+      "type": "number",
+      "default": 0
+    },
+    "preset": {
+      "type": "string",
+      "default": "rounded"
+    },
+    "size": {
+      "type": "string",
+      "default": "medium"
+    },
+    "showLabels": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

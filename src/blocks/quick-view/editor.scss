@@ -1,0 +1,12 @@
+/**
+ * Quick View — editor-only styles.
+ *
+ * The dialog is server-rendered, so the editor only needs to present the
+ * trigger button cleanly.
+ */
+
+.wp-block-cartessia-quick-view {
+	.cartessia-qv__trigger {
+		box-sizing: border-box;
+	}
+}

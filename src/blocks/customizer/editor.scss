@@ -1,0 +1,28 @@
+/**
+ * Live Product Customizer — editor-only styles.
+ *
+ * The priced-options repeater keeps the label on its own full-width line so it
+ * stays readable in the narrow block sidebar, with price + Remove beneath it.
+ */
+
+.cartessia-cz-editor__option-row {
+	padding: 0.6rem 0;
+	border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+	margin-bottom: 0.6rem;
+}
+
+.cartessia-cz-editor__option-row-bottom {
+	display: flex;
+	gap: 0.5rem;
+	align-items: flex-end;
+	margin-top: 0.5rem;
+}
+
+.cartessia-cz-editor__option-row-bottom .components-base-control {
+	flex: 1 1 auto;
+}
+
+.cartessia-cz-editor__option-row-bottom .components-button {
+	flex: 0 0 auto;
+	margin-bottom: 2px;
+}

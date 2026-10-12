@@ -1,0 +1,26 @@
+{
+	"name": "cartessia",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Cartessia — accessible WooCommerce blocks (swatches, quick view, product customizer, delivery date picker, wishlist) built on the WordPress Interactivity API to WCAG 2.2 AA.",
+	"license": "GPL-2.0-or-later",
+	"files": [
+		"cartessia.php",
+		"uninstall.php",
+		"index.php",
+		"readme.txt",
+		"build",
+		"src",
+		"includes",
+		"admin",
+		"languages"
+	],
+	"scripts": {
+		"build": "wp-scripts build --experimental-modules",
+		"start": "wp-scripts start --experimental-modules",
+		"plugin-zip": "wp-scripts plugin-zip"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.0"
+	}
+}

@@ -1,0 +1,19 @@
+# Files and directories here are NOT deployed to the WordPress.org SVN trunk/tag.
+# (src/ IS shipped — readme.txt's Development section documents it, and it keeps
+# the plugin GPL-transparent. build/ is the compiled, runtime output.)
+
+# Dev / CI / repo tooling
+/.git
+/.github
+/.wordpress-org
+/node_modules
+/.gitignore
+/.distignore
+/.editorconfig
+/README.md
+/package-lock.json
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log

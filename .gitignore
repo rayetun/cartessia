@@ -1,0 +1,9 @@
+# Dependencies (regenerate with `npm install`)
+/node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

@@ -1,0 +1,13 @@
+/**
+ * Variation Swatches — editor-only styles.
+ *
+ * The preview shares the front-end classes, so this only softens the editor
+ * canvas presentation. All accessible behaviour lives in style.scss.
+ */
+
+.wp-block-cartessia-swatches {
+	.cartessia-swatch {
+		// Prevent the editor's default button reset from hiding the border.
+		box-sizing: border-box;
+	}
+}

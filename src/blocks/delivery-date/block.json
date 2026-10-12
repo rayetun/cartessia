@@ -1,0 +1,55 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cartessia/delivery-date",
+	"version": "1.0.0",
+	"title": "Delivery Date Picker",
+	"category": "cartessia",
+	"icon": "calendar-alt",
+	"description": "A fully keyboard- and screen-reader-accessible delivery date picker: a role=grid calendar with disabled-date rules, plus a native date input fallback. The chosen date is saved to the order. Built to WCAG 2.2 AA.",
+	"keywords": [ "woocommerce", "delivery", "date", "calendar", "shipping" ],
+	"textdomain": "cartessia",
+	"usesContext": [ "postId" ],
+	"attributes": {
+		"productId": {
+			"type": "number",
+			"default": 0
+		},
+		"preset": {
+			"type": "string",
+			"default": "popover"
+		},
+		"fieldLabel": {
+			"type": "string",
+			"default": "Delivery date"
+		},
+		"minLeadDays": {
+			"type": "number",
+			"default": 2
+		},
+		"maxDays": {
+			"type": "number",
+			"default": 60
+		},
+		"disabledWeekdays": {
+			"type": "array",
+			"default": [ 0 ]
+		},
+		"buttonText": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

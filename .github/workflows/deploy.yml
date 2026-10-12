@@ -1,0 +1,35 @@
+name: Deploy to WordPress.org
+
+# Publishes a new version to the WordPress.org plugin SVN (trunk + a version tag)
+# whenever you publish a GitHub Release. Tag the release with the bare version
+# number that matches readme.txt "Stable tag" and the plugin header "Version"
+# (e.g. 1.0.1 — no leading "v").
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    name: Deploy to WordPress.org SVN
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: WordPress Plugin Deploy
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        with:
+          generate-zip: true
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: cartessia
+
+      - name: Attach the built ZIP to the release
+        if: ${{ steps.deploy.outputs.zip-path != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: cartessia-${{ github.event.release.tag_name }}
+          path: ${{ steps.deploy.outputs.zip-path }}

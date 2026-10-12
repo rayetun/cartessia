@@ -1,0 +1,10 @@
+# Normalise line endings — always LF in the repo (SVN/WordPress.org is Linux).
+* text=auto eol=lf
+
+# Binary assets — never touch.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.woff binary
+*.woff2 binary

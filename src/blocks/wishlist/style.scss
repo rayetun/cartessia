@@ -1,0 +1,83 @@
+/**
+ * Wishlist Button — front-end + shared styles.
+ *
+ * Accessibility: a visible focus ring, a 44px minimum target for the icon
+ * presets, and a pressed state shown by more than colour alone (the heart fills
+ * in, and the accessible name changes to "Remove …").
+ */
+
+.cartessia-wl {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	min-height: 44px;
+	padding: 0.25rem;
+	border: none;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+	line-height: 1;
+
+	&:focus-visible {
+		outline: 3px solid #2f6fed;
+		outline-offset: 2px;
+		border-radius: 6px;
+	}
+
+	/* Icon-only presets read better with a circular focus ring. */
+	&.is-preset-heart:focus-visible,
+	&.is-preset-outline:focus-visible {
+		border-radius: 50%;
+	}
+
+	.cartessia-wl__icon {
+		display: inline-flex;
+
+		svg {
+			fill: none;
+			stroke: currentColor;
+			stroke-width: 1.6;
+			stroke-linejoin: round;
+			transition: fill 0.12s ease;
+		}
+	}
+
+	/* Saved state: the heart fills in. */
+	&[aria-pressed='true'] .cartessia-wl__icon svg {
+		fill: currentColor;
+	}
+}
+
+/* Preset: Heart — fills with a warm accent when saved. */
+.cartessia-wl.is-preset-heart {
+	min-width: 44px;
+	justify-content: center;
+
+	&[aria-pressed='true'] {
+		color: #e0245e;
+	}
+}
+
+/* Preset: Outline heart — fills with the current text colour when saved. */
+.cartessia-wl.is-preset-outline {
+	min-width: 44px;
+	justify-content: center;
+}
+
+/* Preset: Text button — icon plus a visible label in a bordered button. */
+.cartessia-wl.is-preset-text {
+	padding: 0.5rem 0.9rem;
+	border: 1px solid currentColor;
+	border-radius: 6px;
+
+	.cartessia-wl__icon svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.cartessia-wl .cartessia-wl__icon svg {
+		transition: none;
+	}
+}

@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cartessia/quick-view",
+	"version": "1.0.0",
+	"title": "Quick View",
+	"category": "cartessia",
+	"icon": "visibility",
+	"description": "An accessible Quick View button that opens a product preview in a focus-trapped dialog — variation swatches and add-to-cart work inside the modal. Built to WCAG 2.2 AA.",
+	"keywords": [ "woocommerce", "quick view", "product", "modal", "preview" ],
+	"textdomain": "cartessia",
+	"usesContext": [ "postId" ],
+	"attributes": {
+		"productId": {
+			"type": "number",
+			"default": 0
+		},
+		"preset": {
+			"type": "string",
+			"default": "centered"
+		},
+		"buttonText": {
+			"type": "string",
+			"default": ""
+		},
+		"imageSize": {
+			"type": "string",
+			"default": "woocommerce_single"
+		},
+		"showPrice": {
+			"type": "boolean",
+			"default": true
+		},
+		"showDescription": {
+			"type": "boolean",
+			"default": true
+		},
+		"showViewLink": {
+			"type": "boolean",
+			"default": true
+		},
+		"accentColor": {
+			"type": "string",
+			"default": ""
+		},
+		"closeColor": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

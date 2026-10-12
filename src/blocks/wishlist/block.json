@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cartessia/wishlist",
+	"version": "1.0.0",
+	"title": "Wishlist Button",
+	"category": "cartessia",
+	"icon": "heart",
+	"description": "An accessible add/remove wishlist toggle (aria-pressed) for a product. State is shared live across every toggle on the page; guests are stored in the browser, logged-in customers on their account. Built to WCAG 2.2 AA.",
+	"keywords": [ "woocommerce", "wishlist", "save", "favorite", "favourite" ],
+	"textdomain": "cartessia",
+	"usesContext": [ "postId" ],
+	"attributes": {
+		"productId": {
+			"type": "number",
+			"default": 0
+		},
+		"preset": {
+			"type": "string",
+			"default": "heart"
+		},
+		"addLabel": {
+			"type": "string",
+			"default": ""
+		},
+		"removeLabel": {
+			"type": "string",
+			"default": ""
+		}
+	},
+	"supports": {
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

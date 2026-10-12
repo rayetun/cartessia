@@ -1,0 +1,770 @@
+# Copyright (C) 2026 Rayetun
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Cartessia — Accessible Product Blocks for WooCommerce 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/cartessia\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-09-03T10:42:29+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: cartessia\n"
+
+#. Plugin Name of the plugin
+#: cartessia.php
+#: includes/class-cartessia-settings.php:87
+msgid "Cartessia — Accessible Product Blocks for WooCommerce"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: cartessia.php
+msgid "https://wordpress.org/plugins/cartessia/"
+msgstr ""
+
+#. Description of the plugin
+#: cartessia.php
+msgid "Accessible-by-default WooCommerce blocks — variation swatches, quick view, live product customizer, delivery date picker, and wishlist — built on the Interactivity API to WCAG 2.2 AA."
+msgstr ""
+
+#. Author of the plugin
+#: cartessia.php
+msgid "Rayetun"
+msgstr ""
+
+#: build/blocks/customizer/render.php:36
+#: includes/class-cartessia-customizer.php:108
+#: includes/class-cartessia-customizer.php:178
+#: includes/class-cartessia-customizer.php:208
+#: build/blocks/customizer/index.js:1
+msgid "Personalization"
+msgstr ""
+
+#: build/blocks/customizer/render.php:41
+#: includes/class-cartessia-customizer.php:115
+#: includes/class-cartessia-customizer.php:184
+#: includes/class-cartessia-customizer.php:212
+#: build/blocks/customizer/index.js:1
+msgid "Options"
+msgstr ""
+
+#: build/blocks/customizer/render.php:43
+#: build/blocks/delivery-date/render.php:48
+#: build/blocks/quick-view/render.php:131
+#: build/blocks/customizer/index.js:1
+#: build/blocks/delivery-date/index.js:1
+msgid "Add to cart"
+msgstr ""
+
+#. translators: %s: formatted add-on price.
+#: build/blocks/customizer/render.php:104
+#: build/blocks/customizer/render.php:156
+#, php-format
+msgid "(+%s)"
+msgstr ""
+
+#: build/blocks/customizer/render.php:137
+#: build/blocks/customizer/index.js:1
+msgid "None"
+msgstr ""
+
+#: build/blocks/customizer/render.php:167
+msgid "Total:"
+msgstr ""
+
+#: build/blocks/delivery-date/render.php:42
+#: includes/class-cartessia-delivery.php:143
+#: includes/class-cartessia-delivery.php:176
+#: includes/class-cartessia-delivery.php:196
+#: build/blocks/delivery-date/index.js:1
+msgid "Delivery date"
+msgstr ""
+
+#: build/blocks/delivery-date/render.php:109
+#: includes/class-cartessia-store.php:137
+msgid "Choose a delivery date"
+msgstr ""
+
+#: build/blocks/quick-view/render.php:38
+#: build/blocks/quick-view/index.js:1
+msgid "Quick view"
+msgstr ""
+
+#: build/blocks/quick-view/render.php:98
+msgid "Close"
+msgstr ""
+
+#: build/blocks/quick-view/render.php:135
+msgid "View full details"
+msgstr ""
+
+#: build/blocks/wishlist-items/render.php:35
+msgid "Your wishlist is empty."
+msgstr ""
+
+#: build/blocks/wishlist/render.php:37
+#: build/blocks/wishlist/index.js:1
+msgid "Add to wishlist"
+msgstr ""
+
+#: build/blocks/wishlist/render.php:38
+#: build/blocks/wishlist/index.js:1
+msgid "Remove from wishlist"
+msgstr ""
+
+#: includes/class-cartessia-customizer.php:78
+msgid "This product cannot be personalised here."
+msgstr ""
+
+#: includes/class-cartessia-customizer.php:87
+#: includes/class-cartessia-customizer.php:92
+msgid "Invalid customization."
+msgstr ""
+
+#: includes/class-cartessia-customizer.php:130
+#: includes/class-cartessia-delivery.php:157
+#: includes/class-cartessia-store.php:128
+msgid "Added to cart."
+msgstr ""
+
+#: includes/class-cartessia-customizer.php:135
+#: includes/class-cartessia-delivery.php:160
+#: includes/class-cartessia-store.php:129
+msgid "Sorry, this could not be added to your cart."
+msgstr ""
+
+#: includes/class-cartessia-delivery.php:122
+msgid "This product cannot be added here."
+msgstr ""
+
+#: includes/class-cartessia-delivery.php:128
+#: includes/class-cartessia-delivery.php:133
+msgid "Invalid delivery configuration."
+msgstr ""
+
+#: includes/class-cartessia-delivery.php:140
+msgid "Please choose an available delivery date."
+msgstr ""
+
+#: includes/class-cartessia-settings.php:58
+#: includes/class-cartessia-settings.php:59
+#: includes/class-cartessia.php:94
+msgid "Cartessia"
+msgstr ""
+
+#: includes/class-cartessia-settings.php:88
+msgid "Add Cartessia blocks — Variation Swatches, Quick View, Live Product Customizer, Delivery Date Picker, and Wishlist — from the block inserter on any product or shop template. Every block is keyboard and screen-reader accessible out of the box."
+msgstr ""
+
+#: includes/class-cartessia-store.php:127
+msgid "Product loaded."
+msgstr ""
+
+#: includes/class-cartessia-store.php:130
+msgid "Please choose an option first."
+msgstr ""
+
+#. translators: %s: formatted total price.
+#: includes/class-cartessia-store.php:132
+#, php-format
+msgid "Total: %s"
+msgstr ""
+
+#: includes/class-cartessia-store.php:133
+msgid "Added to your wishlist."
+msgstr ""
+
+#: includes/class-cartessia-store.php:134
+msgid "Removed from your wishlist."
+msgstr ""
+
+#. translators: %d: number of matching products.
+#: includes/class-cartessia-store.php:136
+#, php-format
+msgid "%d products found."
+msgstr ""
+
+#: includes/class-cartessia-store.php:138
+msgid "Previous month"
+msgstr ""
+
+#: includes/class-cartessia-store.php:139
+msgid "Next month"
+msgstr ""
+
+#: includes/class-cartessia-store.php:140
+msgid "This date is not available."
+msgstr ""
+
+#. translators: %s: formatted date.
+#: includes/class-cartessia-store.php:142
+#, php-format
+msgid "Selected delivery date: %s"
+msgstr ""
+
+#: includes/class-cartessia-store.php:143
+msgid "Please choose a delivery date first."
+msgstr ""
+
+#: includes/class-cartessia-store.php:144
+#: build/blocks/customizer/index.js:1
+msgid "Remove"
+msgstr ""
+
+#. translators: %s: product name.
+#: includes/class-cartessia-store.php:146
+#, php-format
+msgid "Remove %s from your wishlist"
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:99
+msgid "Select a swatch image"
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:100
+msgid "Use image"
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:114
+#: includes/class-cartessia-swatch-admin.php:163
+msgid "Swatch colour"
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:116
+#: includes/class-cartessia-swatch-admin.php:166
+msgid "Optional. Pick a colour to show this term as a colour swatch in Cartessia. Leave empty for a text/button swatch."
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:119
+#: includes/class-cartessia-swatch-admin.php:170
+msgid "Swatch image"
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:121
+#: includes/class-cartessia-swatch-admin.php:173
+msgid "Optional. Choose an image to show this term as an image swatch. An image takes precedence over the colour."
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:144
+msgid "Select image"
+msgstr ""
+
+#: includes/class-cartessia-swatch-admin.php:145
+msgid "Remove image"
+msgstr ""
+
+#: includes/class-cartessia-wishlist.php:67
+#: includes/class-cartessia-wishlist.php:82
+msgid "Not logged in."
+msgstr ""
+
+#: includes/class-cartessia.php:173
+msgid "Cartessia needs WooCommerce to be active. Its blocks stay hidden until WooCommerce is enabled."
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+#: build/blocks/delivery-date/index.js:1
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/swatches/index.js:1
+#: build/blocks/wishlist/index.js:1
+msgid "Product"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+#: build/blocks/delivery-date/index.js:1
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/swatches/index.js:1
+#: build/blocks/wishlist/index.js:1
+msgid "Product ID"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Leave 0 to use the current product. The customizer works with simple (non-variable) products."
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+#: build/blocks/delivery-date/index.js:1
+msgid "Add to cart button text"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Custom text"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Enable a custom text field"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+#: build/blocks/delivery-date/index.js:1
+msgid "Field label"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Placeholder"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Add-on price when filled in"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Maximum length"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Priced options"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Enable a priced options group"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Group label"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Label"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Price"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Add option"
+msgstr ""
+
+#: build/blocks/customizer/index.js:1
+msgid "Option"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Popover (opens on click)"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Inline (always open)"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Compact inline"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Sunday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Monday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Tuesday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Wednesday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Thursday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Friday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Saturday"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Display"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/swatches/index.js:1
+#: build/blocks/wishlist/index.js:1
+msgid "Preset"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Leave 0 to use the current product. Works with simple (non-variable) products."
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Date rules"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Minimum lead time (days)"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Earliest selectable date = today plus this many days."
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Booking window (days)"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Latest selectable date = today plus this many days."
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "Unavailable weekdays"
+msgstr ""
+
+#: build/blocks/delivery-date/index.js:1
+msgid "An accessible calendar with full keyboard support is shown here on the front end."
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Centered modal"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Side sheet"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Compact card"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/swatches/index.js:1
+msgid "Small"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/swatches/index.js:1
+msgid "Medium"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/swatches/index.js:1
+msgid "Large"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Leave 0 to use the current product (single product page or product loop). Set a product ID to preview a specific product anywhere."
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+#: build/blocks/wishlist-items/index.js:1
+msgid "Layout"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Image size"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Button text"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Content"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Show price"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Show short description"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Show “View full details” link"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Colour"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Add to cart button"
+msgstr ""
+
+#: build/blocks/quick-view/index.js:1
+msgid "Close button"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Rounded"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Square"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Circle / Pill"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Bordered minimal"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Black"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Sky"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Sand"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Leave 0 to use the current product (single product page or product loop). Set a variable product ID to show its swatches on any page."
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+#: build/blocks/wishlist/index.js:1
+msgid "Design"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Size"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Show text label beside each colour"
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Recommended. A visible text label keeps colour swatches usable for everyone, not colour alone."
+msgstr ""
+
+#: build/blocks/swatches/index.js:1
+msgid "Color"
+msgstr ""
+
+#: build/blocks/wishlist-items/index.js:1
+msgid "Columns"
+msgstr ""
+
+#: build/blocks/wishlist-items/index.js:1
+msgid "Wishlist — the products a shopper has saved appear here on the front end."
+msgstr ""
+
+#: build/blocks/wishlist/index.js:1
+msgid "Heart"
+msgstr ""
+
+#: build/blocks/wishlist/index.js:1
+msgid "Outline heart"
+msgstr ""
+
+#: build/blocks/wishlist/index.js:1
+msgid "Text button"
+msgstr ""
+
+#: build/blocks/wishlist/index.js:1
+msgid "Leave 0 to use the current product (single product page or product loop)."
+msgstr ""
+
+#: build/blocks/wishlist/index.js:1
+msgid "Add label"
+msgstr ""
+
+#: build/blocks/wishlist/index.js:1
+msgid "Remove label"
+msgstr ""
+
+#: build/blocks/customizer/block.json
+msgctxt "block title"
+msgid "Product Customizer"
+msgstr ""
+
+#: build/blocks/customizer/block.json
+msgctxt "block description"
+msgid "Let shoppers personalise a product — custom text/engraving and priced options — with a running total that updates live and is announced to screen readers. Built to WCAG 2.2 AA."
+msgstr ""
+
+#: build/blocks/customizer/block.json
+#: build/blocks/delivery-date/block.json
+#: build/blocks/quick-view/block.json
+#: build/blocks/swatches/block.json
+#: build/blocks/wishlist-items/block.json
+#: build/blocks/wishlist/block.json
+msgctxt "block keyword"
+msgid "woocommerce"
+msgstr ""
+
+#: build/blocks/customizer/block.json
+msgctxt "block keyword"
+msgid "product add-ons"
+msgstr ""
+
+#: build/blocks/customizer/block.json
+msgctxt "block keyword"
+msgid "personalization"
+msgstr ""
+
+#: build/blocks/customizer/block.json
+msgctxt "block keyword"
+msgid "engraving"
+msgstr ""
+
+#: build/blocks/customizer/block.json
+msgctxt "block keyword"
+msgid "options"
+msgstr ""
+
+#: build/blocks/delivery-date/block.json
+msgctxt "block title"
+msgid "Delivery Date Picker"
+msgstr ""
+
+#: build/blocks/delivery-date/block.json
+msgctxt "block description"
+msgid "A fully keyboard- and screen-reader-accessible delivery date picker: a role=grid calendar with disabled-date rules, plus a native date input fallback. The chosen date is saved to the order. Built to WCAG 2.2 AA."
+msgstr ""
+
+#: build/blocks/delivery-date/block.json
+msgctxt "block keyword"
+msgid "delivery"
+msgstr ""
+
+#: build/blocks/delivery-date/block.json
+msgctxt "block keyword"
+msgid "date"
+msgstr ""
+
+#: build/blocks/delivery-date/block.json
+msgctxt "block keyword"
+msgid "calendar"
+msgstr ""
+
+#: build/blocks/delivery-date/block.json
+msgctxt "block keyword"
+msgid "shipping"
+msgstr ""
+
+#: build/blocks/quick-view/block.json
+msgctxt "block title"
+msgid "Quick View"
+msgstr ""
+
+#: build/blocks/quick-view/block.json
+msgctxt "block description"
+msgid "An accessible Quick View button that opens a product preview in a focus-trapped dialog — variation swatches and add-to-cart work inside the modal. Built to WCAG 2.2 AA."
+msgstr ""
+
+#: build/blocks/quick-view/block.json
+msgctxt "block keyword"
+msgid "quick view"
+msgstr ""
+
+#: build/blocks/quick-view/block.json
+msgctxt "block keyword"
+msgid "product"
+msgstr ""
+
+#: build/blocks/quick-view/block.json
+msgctxt "block keyword"
+msgid "modal"
+msgstr ""
+
+#: build/blocks/quick-view/block.json
+msgctxt "block keyword"
+msgid "preview"
+msgstr ""
+
+#: build/blocks/swatches/block.json
+msgctxt "block title"
+msgid "Variation Swatches"
+msgstr ""
+
+#: build/blocks/swatches/block.json
+msgctxt "block description"
+msgid "Accessible colour, image, and button swatches that replace the variation dropdowns on a variable product. Real radio-group semantics, full keyboard support, and a visible text label beside every colour. Built to WCAG 2.2 AA."
+msgstr ""
+
+#: build/blocks/swatches/block.json
+msgctxt "block keyword"
+msgid "swatches"
+msgstr ""
+
+#: build/blocks/swatches/block.json
+msgctxt "block keyword"
+msgid "variation"
+msgstr ""
+
+#: build/blocks/swatches/block.json
+msgctxt "block keyword"
+msgid "attribute"
+msgstr ""
+
+#: build/blocks/swatches/block.json
+msgctxt "block keyword"
+msgid "color"
+msgstr ""
+
+#: build/blocks/wishlist-items/block.json
+msgctxt "block title"
+msgid "Wishlist"
+msgstr ""
+
+#: build/blocks/wishlist-items/block.json
+msgctxt "block description"
+msgid "Shows the products a shopper has saved to their wishlist, with a link and an accessible remove button for each. Renders client-side from the shared wishlist state, so it stays cache-safe. Built to WCAG 2.2 AA."
+msgstr ""
+
+#: build/blocks/wishlist-items/block.json
+#: build/blocks/wishlist/block.json
+msgctxt "block keyword"
+msgid "wishlist"
+msgstr ""
+
+#: build/blocks/wishlist-items/block.json
+msgctxt "block keyword"
+msgid "saved"
+msgstr ""
+
+#: build/blocks/wishlist-items/block.json
+msgctxt "block keyword"
+msgid "favorites"
+msgstr ""
+
+#: build/blocks/wishlist-items/block.json
+msgctxt "block keyword"
+msgid "favourites"
+msgstr ""
+
+#: build/blocks/wishlist/block.json
+msgctxt "block title"
+msgid "Wishlist Button"
+msgstr ""
+
+#: build/blocks/wishlist/block.json
+msgctxt "block description"
+msgid "An accessible add/remove wishlist toggle (aria-pressed) for a product. State is shared live across every toggle on the page; guests are stored in the browser, logged-in customers on their account. Built to WCAG 2.2 AA."
+msgstr ""
+
+#: build/blocks/wishlist/block.json
+msgctxt "block keyword"
+msgid "save"
+msgstr ""
+
+#: build/blocks/wishlist/block.json
+msgctxt "block keyword"
+msgid "favorite"
+msgstr ""
+
+#: build/blocks/wishlist/block.json
+msgctxt "block keyword"
+msgid "favourite"
+msgstr ""

@@ -1,0 +1,249 @@
+/**
+ * Delivery Date Picker — front-end + shared styles.
+ *
+ * Accessibility: visible focus rings on nav, day cells, and the button; day
+ * cells meet the 40px target size; selected and disabled states use more than
+ * colour alone (weight/ring for selected, strike + reduced opacity for
+ * disabled).
+ */
+
+.cartessia-dp {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+
+	.cartessia-dp__label {
+		display: block;
+		font-weight: 600;
+		margin-bottom: 0.35rem;
+	}
+
+	.cartessia-dp__native {
+		min-height: 40px;
+		padding: 0.4rem 0.6rem;
+		border: 1px solid currentColor;
+		border-radius: 6px;
+		background: transparent;
+		color: inherit;
+
+		&:focus-visible {
+			outline: 3px solid #2f6fed;
+			outline-offset: 2px;
+		}
+	}
+
+	.cartessia-dp__cal-header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0.5rem;
+		margin-bottom: 0.5rem;
+	}
+
+	.cartessia-dp__cal-title {
+		font-weight: 600;
+	}
+
+	.cartessia-dp__nav {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		font-size: 1.25rem;
+		line-height: 1;
+		border: 1px solid currentColor;
+		border-radius: 6px;
+		background: transparent;
+		color: inherit;
+		cursor: pointer;
+
+		&:focus-visible {
+			outline: 3px solid #2f6fed;
+			outline-offset: 2px;
+		}
+	}
+
+	.cartessia-dp__grid {
+		border-collapse: collapse;
+		width: 100%;
+		table-layout: fixed;
+
+		th {
+			padding: 0.35rem 0;
+			font-size: 0.8rem;
+			font-weight: 600;
+			opacity: 0.8;
+		}
+
+		abbr {
+			text-decoration: none;
+			cursor: help;
+		}
+	}
+
+	.cartessia-dp__day {
+		height: 40px;
+		text-align: center;
+		vertical-align: middle;
+		border-radius: 6px;
+		cursor: pointer;
+
+		&:focus-visible {
+			outline: 3px solid #2f6fed;
+			outline-offset: -2px;
+		}
+
+		&:hover:not(.is-disabled) {
+			background: rgba( 47, 111, 237, 0.12 );
+		}
+
+		&.is-selected {
+			background: #2f6fed;
+			color: #fff;
+			font-weight: 700;
+		}
+
+		&.is-disabled {
+			opacity: 0.4;
+			text-decoration: line-through;
+			cursor: not-allowed;
+		}
+	}
+
+	.cartessia-dp__empty {
+		height: 40px;
+	}
+
+	.cartessia-dp__chosen {
+		font-weight: 600;
+		min-height: 1.5em;
+	}
+
+	.cartessia-dp__add {
+		align-self: flex-start;
+		min-height: 44px;
+		padding: 0.6rem 1.2rem;
+		border: none;
+		border-radius: 6px;
+		background: #2f6fed;
+		color: #fff;
+		font-weight: 600;
+		cursor: pointer;
+
+		&:focus-visible {
+			outline: 3px solid #1e1e1e;
+			outline-offset: 2px;
+		}
+
+		&[disabled] {
+			opacity: 0.6;
+			cursor: default;
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.cartessia-dp .cartessia-dp__day:hover:not(.is-disabled) {
+		background: rgba( 120, 160, 255, 0.2 );
+	}
+}
+
+/*
+ * Preset: Popover — the calendar collapses behind a toggle button and floats
+ * over the page when open, so it takes no vertical space until needed.
+ */
+.cartessia-dp.is-preset-popover {
+	position: relative;
+}
+
+.cartessia-dp__toggle {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	min-height: 44px;
+	padding: 0.5rem 0.9rem;
+	border: 1px solid currentColor;
+	border-radius: 6px;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+
+	&:focus-visible {
+		outline: 3px solid #2f6fed;
+		outline-offset: 2px;
+	}
+
+	&::after {
+		content: '▾';
+		font-size: 0.8em;
+		opacity: 0.7;
+	}
+
+	&[aria-expanded='true']::after {
+		content: '▴';
+	}
+}
+
+.cartessia-dp.is-preset-popover .cartessia-dp__calendar {
+	position: absolute;
+	left: 0;
+	z-index: 30;
+	margin-top: 0.35rem;
+	padding: 0.85rem;
+	width: min(20rem, 92vw);
+	/* The popover is a floating surface with its own light colours, so it reads
+	   correctly on a light page even when the visitor's OS is in dark mode (the
+	   page theme, not the OS, decides the surrounding colour). */
+	background: #fff;
+	color: #1e1e1e;
+	border: 1px solid rgba( 0, 0, 0, 0.2 );
+	border-radius: 8px;
+	box-shadow: 0 10px 32px rgba( 0, 0, 0, 0.2 );
+}
+
+/* Preset: Compact — a smaller inline calendar. */
+.cartessia-dp.is-preset-compact {
+	font-size: 0.9rem;
+
+	.cartessia-dp__day,
+	.cartessia-dp__empty {
+		height: 32px;
+	}
+
+	.cartessia-dp__nav {
+		width: 32px;
+		height: 32px;
+		font-size: 1rem;
+	}
+
+	.cartessia-dp__grid th {
+		font-size: 0.72rem;
+	}
+}
+
+/*
+ * Layout override. Block themes wrap post content in a constrained layout that
+ * centres a max-width block (margin-inline: auto) and can drop our flex display.
+ * Doubling the class raises specificity above those theme rules so the picker
+ * stays left-aligned at a sensible width in every preset.
+ */
+/*
+ * The wrapper follows the block-theme's normal content alignment (so it lines up
+ * with surrounding headings). Rather than fight that centring, we left-align the
+ * calendar *inside* the wrapper at a readable width. Doubling the class beats the
+ * theme rule that would otherwise drop our flex display.
+ */
+.cartessia-dp.cartessia-dp {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.cartessia-dp .cartessia-dp__calendar {
+	width: min(24rem, 100%);
+}
+
+.cartessia-dp.is-preset-compact .cartessia-dp__calendar {
+	width: min(20rem, 100%);
+}

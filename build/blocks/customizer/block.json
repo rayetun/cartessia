@@ -1,0 +1,75 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "cartessia/customizer",
+  "version": "1.0.0",
+  "title": "Product Customizer",
+  "category": "cartessia",
+  "icon": "edit",
+  "description": "Let shoppers personalise a product — custom text/engraving and priced options — with a running total that updates live and is announced to screen readers. Built to WCAG 2.2 AA.",
+  "keywords": [
+    "woocommerce",
+    "product add-ons",
+    "personalization",
+    "engraving",
+    "options"
+  ],
+  "textdomain": "cartessia",
+  "usesContext": [
+    "postId"
+  ],
+  "attributes": {
+    "productId": {
+      "type": "number",
+      "default": 0
+    },
+    "textEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "textLabel": {
+      "type": "string",
+      "default": "Personalization"
+    },
+    "textPlaceholder": {
+      "type": "string",
+      "default": ""
+    },
+    "textPrice": {
+      "type": "number",
+      "default": 0
+    },
+    "textMaxLength": {
+      "type": "number",
+      "default": 50
+    },
+    "optionsEnabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "optionsLabel": {
+      "type": "string",
+      "default": "Options"
+    },
+    "options": {
+      "type": "array",
+      "default": []
+    },
+    "buttonText": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScriptModule": "file:./view.js",
+  "render": "file:./render.php"
+}

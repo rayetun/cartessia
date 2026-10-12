@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "cartessia/wishlist-items",
+	"version": "1.0.0",
+	"title": "Wishlist",
+	"category": "cartessia",
+	"icon": "list-view",
+	"description": "Shows the products a shopper has saved to their wishlist, with a link and an accessible remove button for each. Renders client-side from the shared wishlist state, so it stays cache-safe. Built to WCAG 2.2 AA.",
+	"keywords": [ "woocommerce", "wishlist", "saved", "favorites", "favourites" ],
+	"textdomain": "cartessia",
+	"attributes": {
+		"columns": {
+			"type": "number",
+			"default": 3
+		}
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide" ],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

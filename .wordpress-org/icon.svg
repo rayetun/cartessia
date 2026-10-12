@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Cartessia">
+  <title>Cartessia</title>
+  <defs>
+    <linearGradient id="basket" x1="0.12" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#2AD2BB"/><stop offset="0.5" stop-color="#11B4A1"/><stop offset="1" stop-color="#0A8676"/>
+    </linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#52EAD3"/><stop offset="1" stop-color="#23C9B3"/>
+    </linearGradient>
+    <radialGradient id="panelGloss" cx="0.3" cy="0.0" r="0.9">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.38"/><stop offset="0.5" stop-color="#ffffff" stop-opacity="0.04"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="wheelG" cx="0.35" cy="0.3" r="0.8">
+      <stop offset="0" stop-color="#13A594"/><stop offset="1" stop-color="#086457"/>
+    </radialGradient>
+    <radialGradient id="hiRose" cx="0.34" cy="0.3" r="0.75"><stop offset="0" stop-color="#FFC4CE"/><stop offset="0.45" stop-color="#FB7185"/><stop offset="1" stop-color="#E24A62"/></radialGradient>
+    <radialGradient id="hiAmber" cx="0.34" cy="0.3" r="0.75"><stop offset="0" stop-color="#FFE3A6"/><stop offset="0.45" stop-color="#FBBF24"/><stop offset="1" stop-color="#E09A05"/></radialGradient>
+    <radialGradient id="hiViolet" cx="0.34" cy="0.3" r="0.75"><stop offset="0" stop-color="#D6C9FF"/><stop offset="0.45" stop-color="#A78BFA"/><stop offset="1" stop-color="#8460F0"/></radialGradient>
+    <radialGradient id="hiSky" cx="0.34" cy="0.3" r="0.75"><stop offset="0" stop-color="#BFE9FF"/><stop offset="0.45" stop-color="#38BDF8"/><stop offset="1" stop-color="#1894D8"/></radialGradient>
+    <filter id="sh" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#054239" flood-opacity="0.30"/>
+    </filter>
+    <filter id="prodSh" x="-60%" y="-60%" width="220%" height="220%">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0b2f2a" flood-opacity="0.28"/>
+    </filter>
+    <style>
+      @keyframes drop{
+        0%{transform:translate(-30px,-84px) scale(.92);opacity:0}
+        7%{opacity:1}
+        40%{transform:translate(-9px,-30px) scale(1);opacity:1}
+        54%{transform:translate(0,0) scale(1);opacity:1}
+        66%{transform:translate(0,16px) scale(.72);opacity:1}
+        74%,100%{transform:translate(0,22px) scale(.5);opacity:0}
+      }
+      @keyframes bounce{
+        0%,50%{transform:scaleY(1)}
+        57%{transform:scaleY(.955)}
+        64%{transform:scaleY(1.022)}
+        71%,100%{transform:scaleY(1)}
+      }
+      @keyframes spark{
+        0%,53%{opacity:0;transform:scale(.2)}
+        60%{opacity:.95;transform:scale(1.05)}
+        72%,100%{opacity:0;transform:scale(1.35)}
+      }
+      .drop{transform-box:fill-box;transform-origin:center;animation:drop 2.6s cubic-bezier(.45,0,.35,1) infinite}
+      .cart{transform-box:fill-box;transform-origin:50% 100%;animation:bounce 2.6s ease-in-out infinite}
+      .sparkle{transform-box:fill-box;transform-origin:center;animation:spark 2.6s ease-out infinite}
+      @media (prefers-reduced-motion: reduce){ .drop,.cart,.sparkle{animation:none} .drop{opacity:0} }
+    </style>
+  </defs>
+
+  <g class="cart">
+    <g filter="url(#sh)">
+      <path d="M36 100 L58 100 L84 130" fill="none" stroke="#0C9384" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="114" cy="212" r="13" fill="url(#wheelG)"/><circle cx="110" cy="207" r="3.4" fill="#5FEBD6" opacity="0.7"/>
+      <circle cx="178" cy="212" r="13" fill="url(#wheelG)"/><circle cx="174" cy="207" r="3.4" fill="#5FEBD6" opacity="0.7"/>
+
+      <g filter="url(#prodSh)">
+        <circle cx="118" cy="122" r="13.5" fill="url(#hiRose)"/>
+        <circle cx="146" cy="120" r="13.5" fill="url(#hiAmber)"/>
+        <circle cx="174" cy="122" r="13.5" fill="url(#hiViolet)"/>
+      </g>
+
+      <!-- product dropping into the cart -->
+      <g class="drop"><circle cx="146" cy="118" r="13.5" fill="url(#hiSky)" filter="url(#prodSh)"/></g>
+
+      <path d="M94 128 L198 128 Q206 128 204 136 L189 179 Q187 186 179 186 L109 186 Q101 186 99 179 L84 136 Q82 128 90 128 Z" fill="url(#basket)"/>
+      <g stroke="#ffffff" stroke-opacity="0.16" stroke-width="2.4" stroke-linecap="round">
+        <line x1="122" y1="138" x2="119" y2="180"/>
+        <line x1="146" y1="138" x2="146" y2="180"/>
+        <line x1="170" y1="138" x2="173" y2="180"/>
+        <line x1="92" y1="150" x2="200" y2="150"/>
+      </g>
+      <path d="M94 128 L198 128 Q206 128 204 136 L202.5 140 L89.5 140 L82 136 Q82 128 90 128 Z" fill="url(#rim)"/>
+      <path d="M94 128 L198 128 Q206 128 204 136 L189 179 Q187 186 179 186 L109 186 Q101 186 99 179 L84 136 Q82 128 90 128 Z" fill="url(#panelGloss)"/>
+    </g>
+  </g>
+
+  <!-- landing sparkle -->
+  <g class="sparkle" transform="translate(146,112)">
+    <path d="M0 -10 Q1.6 -1.6 10 0 Q1.6 1.6 0 10 Q-1.6 1.6 -10 0 Q-1.6 -1.6 0 -10 Z" fill="#ffffff"/>
+  </g>
+</svg>

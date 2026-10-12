@@ -1,0 +1,217 @@
+/**
+ * Quick View — front-end + shared styles.
+ *
+ * Accessibility: visible focus rings on the trigger, close, and add buttons;
+ * the dialog uses the native backdrop; motion is gated behind
+ * prefers-reduced-motion.
+ */
+
+.cartessia-qv__trigger,
+.cartessia-qv__add,
+.cartessia-qv__close {
+	&:focus-visible {
+		outline: 3px solid #2f6fed;
+		outline-offset: 2px;
+	}
+}
+
+.cartessia-qv__trigger {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	min-height: 40px;
+	padding: 0.5rem 1rem;
+	border: 1px solid currentColor;
+	border-radius: 6px;
+	background: transparent;
+	color: inherit;
+	cursor: pointer;
+}
+
+.cartessia-qv__dialog {
+	width: min(920px, 92vw);
+	max-height: 90vh;
+	padding: 0;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 0 12px 40px rgba( 0, 0, 0, 0.28 );
+	color: inherit;
+	background: #fff;
+
+	&::backdrop {
+		background: rgba( 0, 0, 0, 0.5 );
+	}
+}
+
+.cartessia-qv__panel {
+	position: relative;
+	overflow: auto;
+	max-height: 90vh;
+	padding: 1.5rem;
+}
+
+.cartessia-qv__close {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	width: 40px;
+	height: 40px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5rem;
+	line-height: 1;
+	color: var(--cartessia-qv-close, inherit);
+	border: 1px solid var(--cartessia-qv-close, currentColor);
+	border-radius: 50%;
+	background: transparent;
+	cursor: pointer;
+}
+
+.cartessia-qv__body {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1.5rem;
+	align-items: start;
+}
+
+.cartessia-qv__media img {
+	max-width: 100%;
+	/* Keep the image from dominating the panel and pushing the actions below
+	   the fold — it scales down to fit rather than forcing a tall scroll. */
+	max-height: 52vh;
+	height: auto;
+	object-fit: contain;
+	border-radius: 8px;
+}
+
+.cartessia-qv__title {
+	margin: 0 0 0.5rem;
+}
+
+.cartessia-qv__price {
+	font-size: 1.15rem;
+	margin-bottom: 0.75rem;
+}
+
+.cartessia-qv__actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.75rem;
+	align-items: center;
+	margin-top: 1rem;
+}
+
+.cartessia-qv__add {
+	min-height: 44px;
+	padding: 0.6rem 1.2rem;
+	border: none;
+	border-radius: 6px;
+	background: var(--cartessia-qv-accent, #2f6fed);
+	color: #fff;
+	cursor: pointer;
+	font-weight: 600;
+}
+
+.cartessia-qv__view {
+	text-decoration: underline;
+}
+
+/* Preset: Side sheet — full-height panel sliding in from the right edge. */
+.cartessia-qv.is-preset-side .cartessia-qv__dialog {
+	margin: 0 0 0 auto;
+	height: 100vh;
+	max-height: 100vh;
+	width: min(480px, 92vw);
+	border-radius: 0;
+}
+.cartessia-qv.is-preset-side .cartessia-qv__panel {
+	max-height: 100vh;
+}
+.cartessia-qv.is-preset-side .cartessia-qv__body {
+	grid-template-columns: 1fr;
+}
+.cartessia-qv.is-preset-side .cartessia-qv__media img {
+	max-height: 38vh;
+	width: 100%;
+	object-fit: cover;
+}
+
+/*
+ * Preset: Compact card — a small product card, not a stacked full modal.
+ * A fixed square thumbnail floats left with the title and price beside it;
+ * swatches and the action row clear below. Narrow and tight, visibly distinct
+ * from the large two-column Centered modal.
+ */
+.cartessia-qv.is-preset-compact .cartessia-qv__dialog {
+	width: min(420px, 92vw);
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__panel {
+	padding: 1.1rem;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__body {
+	display: block;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__media {
+	float: left;
+	width: 104px;
+	margin: 0 0.9rem 0.5rem 0;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__media img {
+	width: 104px;
+	height: 104px;
+	max-height: 104px;
+	object-fit: cover;
+	border-radius: 8px;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__title {
+	font-size: 1.15rem;
+	margin: 0 0 0.2rem;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__price {
+	font-size: 1rem;
+	margin-bottom: 0.4rem;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__desc {
+	clear: left;
+}
+.cartessia-qv.is-preset-compact .cartessia-swatches {
+	clear: left;
+	margin-top: 0.4rem;
+}
+.cartessia-qv.is-preset-compact .cartessia-qv__actions {
+	clear: left;
+	margin-top: 0.85rem;
+}
+
+/* Responsive: stack on small screens. */
+@media (max-width: 640px) {
+	.cartessia-qv__body {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Motion only when the visitor allows it. */
+@media (prefers-reduced-motion: no-preference) {
+	.cartessia-qv__dialog[open] {
+		animation: cartessia-qv-in 0.18s ease-out;
+	}
+	@keyframes cartessia-qv-in {
+		from {
+			opacity: 0;
+			transform: translateY(8px);
+		}
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+/* Dark theme readability for the panel. */
+@media (prefers-color-scheme: dark) {
+	.cartessia-qv__dialog {
+		background: #1e1e1e;
+		color: #f3f3f3;
+	}
+}

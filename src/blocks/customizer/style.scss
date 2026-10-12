@@ -1,0 +1,122 @@
+/**
+ * Live Product Customizer — front-end + shared styles.
+ *
+ * Accessibility: visible focus rings on the text field, options, and button;
+ * option buttons meet the 24px minimum target size; the total is a real visible
+ * value mirrored to a polite live region in the markup.
+ */
+
+.cartessia-cz {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	max-width: 32rem;
+
+	.cartessia-cz__label {
+		display: block;
+		font-weight: 600;
+		margin-bottom: 0.35rem;
+	}
+
+	.cartessia-cz__price-note {
+		font-weight: 400;
+		opacity: 0.8;
+	}
+
+	.cartessia-cz__text {
+		width: 100%;
+		min-height: 40px;
+		padding: 0.45rem 0.6rem;
+		border: 1px solid currentColor;
+		border-radius: 6px;
+		background: transparent;
+		color: inherit;
+
+		&:focus-visible {
+			outline: 3px solid #2f6fed;
+			outline-offset: 2px;
+		}
+	}
+
+	.cartessia-cz__options {
+		border: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+	.cartessia-cz__options-list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.cartessia-cz__option {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.35rem;
+		min-height: 40px;
+		min-width: 24px;
+		padding: 0.4rem 0.8rem;
+		border: 1px solid currentColor;
+		border-radius: 6px;
+		background: transparent;
+		color: inherit;
+		cursor: pointer;
+		line-height: 1.2;
+
+		&:focus-visible {
+			outline: 3px solid #2f6fed;
+			outline-offset: 2px;
+		}
+
+		&[aria-checked='true'] {
+			border-width: 2px;
+			box-shadow: inset 0 0 0 1px currentColor;
+			font-weight: 600;
+		}
+	}
+
+	.cartessia-cz__total {
+		display: flex;
+		align-items: baseline;
+		gap: 0.5rem;
+		font-size: 1.2rem;
+	}
+
+	.cartessia-cz__total-label {
+		font-weight: 600;
+	}
+
+	.cartessia-cz__total-value {
+		font-weight: 700;
+	}
+
+	.cartessia-cz__add {
+		align-self: flex-start;
+		min-height: 44px;
+		padding: 0.6rem 1.2rem;
+		border: none;
+		border-radius: 6px;
+		background: #2f6fed;
+		color: #fff;
+		font-weight: 600;
+		cursor: pointer;
+
+		&:focus-visible {
+			outline: 3px solid #1e1e1e;
+			outline-offset: 2px;
+		}
+
+		&[disabled] {
+			opacity: 0.6;
+			cursor: default;
+		}
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.cartessia-cz .cartessia-cz__option,
+	.cartessia-cz .cartessia-cz__text {
+		transition: border-color 0.12s ease, box-shadow 0.12s ease;
+	}
+}
