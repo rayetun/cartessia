@@ -26,6 +26,7 @@ jobs:
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SLUG: cartessia
+          ASSETS_DIR: .wordpress-org
 
       - name: Attach the built ZIP to the release
         if: ${{ steps.deploy.outputs.zip-path != '' }}
